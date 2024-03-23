@@ -1,0 +1,166 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(216, 216, 216);
+    padding: 5px;
+    text-align: center;
+}
+
+main{
+    margin-left: 200px;
+    padding-left: 30px;
+    padding-right: 50px;
+    background-color: rgb(232, 230, 230);
+    text-align: justify;
+}
+
+.navbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+  
+.navbar a:hover {
+    background-color: #555;
+}
+
+.nav-item{
+    color: white;
+}
+
+.nav-sub-item{
+    font-size: 12;
+    color: rgb(168, 168, 168);
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item-wrapper {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+  
+#popup-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+}
+
+.popup-btn{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+index>ul{
+    font-size: larger;
+}
+
+.code{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: fit-content;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(182, 182, 182);
+    user-select: none;
+}
+
+.copy-button {
+    background-color: #333;
+    border: none;
+    color: rgb(182, 182, 182);
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    color: eee;
+}
+
+.content{
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.comment{
+    color: rgb(151, 151, 151);
+}
+
+.red{
+    color: rgb(255, 86, 154);
+}
+
+.yellow{
+    color: rgb(234, 188, 118);
+}
+
+.green{
+    color: rgb(75, 160, 121);
+}
+
+.blue{
+    color: rgb(73, 140, 255);
+}
+
+a{
+    font-weight: bold;
+}
+
+a:href{
+    color: rgb(74, 74, 246);
+}
+
+.section{
+    background-color: black;
+    color: rgb(216, 216, 216);
+    padding: 5px;
+    margin: inherit;
+    border-radius: 5px;
+}
