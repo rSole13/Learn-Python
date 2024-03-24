@@ -1,0 +1,422 @@
+<html lang="en">
+<!--This webpaged used ChatGPT to generate the text and explanations-->
+
+<head>
+    <title>Learn Python</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar" onmouseover="enableNavScroll()" onmouseleave="disableNavScroll()">
+        <a href="#index" class="nav-item">Index</a>
+        <a href="#intro" class="nav-item">Introduction</a>
+        <a href="#var" class="nav-item"> Variables</a>
+        <div class="submenu">
+            <a href="#what-is-a-variable"> - What is a variable</a>
+            <a href="#variable-naming-rules"> - Naming rules</a>
+            <a href="#assigning-values"> - Assigning values</a>
+            <a href="#data-types"> - Data types</a>
+            <a href="#using-variables"> - Using variables</a>
+            <a href="#var-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#math" class="nav-item"> Math</a>
+        <div class="submenu">
+            <a href="#basic-arithmetic"> - Basic arithmetic</a>
+            <a href="#math-module"> - Math module</a>
+            <a href="#complex-numbers"> - Complex numbers</a>
+            <a href="#numPy-library"> - NumPy library</a>
+            <a href="#math-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#stringmethods" class="nav-item"> String methods</a>
+        <a href="#functions" class="nav-item"> Functions</a>
+        <br><br><br>
+    </nav>
+    <main>
+        <header>
+            <h1>Learn Python</h1>
+            <p>By: Roger Solé Ramon</p>
+        </header><br>
+        <index id="index">
+            <h2 class="section">INDEX:</h2>
+            <ul class="index-text">
+                <li><a href="#intro">Introduction to Python</a></li>
+                <li><a href="#var">Variables</a></li>
+                <li><a href="#math">Math</a></li>
+                <li><a href="#stringmethods">String methods</a></li>
+                <li>Functions</li>
+                <li>If/Else</li>
+                <li>While</li>
+                <li>Lists</li>
+                <li>Try/Except</li>
+            </ul>
+        </index>
+        <div class="introduction" id="intro">
+            <div>
+                <h2 class="section">Introduction to Python</h2>
+                <p>Python is a versatile and powerful programming language known for its simplicity and readability.
+                    Whether you're a beginner taking your first steps into the world of coding or an experienced
+                    developer looking to expand your skill set, Python has something to offer for everyone.</p>
+                <h2>Why Python?</h2>
+                <p>There are numerous reasons why Python has become one of the most popular programming languages in the
+                    world:</p>
+                <ol>
+                    <li> <b>Easy to Learn:</b> Python's simple and straightforward syntax makes it easy for beginners to
+                        grasp programming concepts quickly.</li><br>
+                    <li> <b>Versatile:</b> Python is suitable for a wide range of applications, including web
+                        development, data analysis, artificial intelligence, machine learning, automation, and more.
+                    </li><br>
+                    <li> <b>Large Standard Library:</b> Python comes with a comprehensive standard library that provides
+                        ready-to-use modules and functions for various tasks, reducing the need to write code from
+                        scratch.</li><br>
+                    <li> <b>Community and Ecosystem:</b> Python boasts a vast and active community of developers who
+                        contribute to libraries, frameworks, and tools, making it easier to find support and resources.
+                    </li><br>
+                    <li> <b>Cross-Platform Compatibility:</b> Python is available on all major operating systems,
+                        including Windows, macOS, and Linux, ensuring code portability across different platforms.</li>
+                    <br>
+                    <li> <b>Source:</b> Python is free and open-source, allowing anyone to contribute to its development
+                        and ensuring transparency and accessibility.</li>
+                </ol>
+            </div>
+            <div>
+                <h2>What Can You Do with Python?</h2>
+                <p>The versatility of Python means you can use it for a wide range of projects and applications,
+                    including:</p>
+                <ol>
+                    <li> <b>Web Development:</b> Build dynamic websites and web applications using frameworks like
+                        Django and Flask.</li><br>
+                    <li> <b>Data Analysis and Visualization:</b> Analyze large datasets and create interactive
+                        visualizations using libraries such as Pandas, NumPy, and Matplotlib.</li><br>
+                    <li> <b>Artificial Intelligence and Machine Learning:</b> Develop machine learning models and AI
+                        applications with libraries like TensorFlow, Keras, and Scikit-learn.</li><br>
+                    <li> <b>Scripting and Automation:</b> Automate repetitive tasks and create scripts to streamline
+                        workflows.</li><br>
+                    <li> <b>Game Development:</b> Create games using libraries like Pygame.</li><br>
+                    <li> <b>Desktop GUI Applications:</b> Build desktop applications with graphical user interfaces
+                        using libraries like Tkinter or PyQt.</li>
+                </ol>
+            </div>
+            <div>
+                <h2>Getting Started</h2>
+                <p>To start coding in Python, all you need is a text editor and the Python interpreter installed on your
+                    computer. You can download Python for free from the official website <a
+                        href="https://www.python.org">https://www.python.org</a> and follow the installation
+                    instructions for your operating system.</p>
+                <p>Once Python is installed, you can write Python code in a plain text editor or use integrated
+                    development environments (IDEs) like PyCharm, Visual Studio Code, or Jupyter Notebook, which offer
+                    features like syntax highlighting, code completion, and debugging tools to enhance your coding
+                    experience.</p>
+            </div>
+            <div>
+                <h2>Conclusion</h2>
+                <p>Python's simplicity, versatility, and vibrant community make it an excellent choice for programmers
+                    of all levels. Whether you're building websites, analyzing data, creating AI applications, or
+                    exploring new technologies, Python provides the tools and resources you need to bring your ideas to
+                    life. So, dive in, start coding, and unlock the endless possibilities of Python programming!</p>
+            </div>
+        </div>
+        <div class="variables" id="var">
+            <h2 class="section">Variables in Python</h2>
+            <p>Variables are fundamental elements in programming languages like Python. They serve as <span
+                    class="red"><b>containers to store data values</b></span> that can be manipulated and referenced
+                throughout a program. Understanding variables is crucial for any Python developer, as they play a
+                central role in storing and managing information within a program.</p>
+            <h2 id="what-is-a-variable">What is a Variable?</h2>
+            <p>In Python, a variable is a symbolic name that represents a <span class="red"><b>value stored in computer
+                        memory</b></span>. Think of variables as labeled boxes where you can store different types of
+                data, such as numbers, strings, lists, or more complex data structures. These values can be modified,
+                reassigned, and used in various operations within your code</p>
+            <h2 id="variable-naming-rules">Variable Naming Rules</h2>
+            <p>When naming variables in Python, there are some rules to follow:</p>
+            <ol>
+                <li>Variable names must start with a letter (a-z, A-Z) or an underscore (_).</li>
+                <li>The subsequent characters in a variable name can be letters, numbers (0-9), or underscores</li>
+                <li>Variable names are case-sensitive, meaning <b>'myVariable'</b> and <b>'myvariable'</b> would be
+                    treated as different variables.</li>
+                <li>Python keywords (reserved words like <b>'if'</b>, <b>'for'</b>, <b>'while'</b>, etc.) cannot be used
+                    as variable names.</li>
+            </ol>
+            <h2 id="assigning-values">Assigning Values to Variables</h2>
+            <p>In Python, you can assign values to variables using the assignment operator (=). Here's a basic example:
+            </p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content1')">Copy Code</button>
+                </div>
+                <div class="content" id="content1">
+                    <p class="comment"># Assigning values to variables</p>
+                    <p>x = <span class="red">10</span></p>
+                    <p>name = <span class="green">"John Doe"</span></p>
+                </div>
+            </div>
+            <p>In this example, x is assigned the value 10, and name is assigned the string "John Doe". Python infers
+                the data type based on the value assigned to the variable, so you don't need to explicitly declare the
+                data type.</p>
+            <h2 id="data-types">Variable Data Types</h2>
+            <p>Python is dynamically typed, meaning you don't need to declare the data type of a variable explicitly.
+                Instead, Python determines the data type dynamically based on the value assigned to it. Some common data
+                types in Python include:</p>
+            <ul>
+                <li><b>Integer (int): </b>Whole numbers without decimal points, such as <b> '10', '-5', '1000'.</b></li>
+                <li><b>Float (float): </b>Numbers with decimal points, such as <b>'3.14', '-0.5, '2.718'</b></li>
+                <li><b>String (str): </b>Sequence of characters enclosed within single (') or double (") quotes, such as
+                    <b>"Hello", 'Python', "123".</b>
+                </li>
+                <li><b>Boolean (bool): </b>Represents either <b>True or False.</b></li>
+                <li><b>List, Tuple, Dictionary, Set: </b>More complex data structures used to store collections of
+                    values.</li>
+            </ul>
+            <h2 id="using-variables">Using Variables</h2>
+            <p>Once you've assigned values to variables, you can perform various operations using them:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content2')">Copy Code</button>
+                </div>
+                <div class="content" id="content2">
+                    <p class="comment"># Performing operations using variables</p>
+                    <p>x = <span class="red">10</span></p>
+                    <p>y = <span class="red">20</span></p>
+                    <p><span class="yellow">sum</span> = x + y</p>
+                    <p><span class="yellow">print</span>(<span class="green">"The sum of"</span>, x, <span
+                            class="green">"and"</span>, y, <span class="green">"is"</span>, <span
+                            class="yellow">sum</span>)</p>
+                </div>
+            </div>
+            <p>In this example, we define two variables x and y, then calculate their sum and print the result using the
+                print() function.</p>
+            <h2 id="var-conclusion">Conclusion</h2>
+            <p>Variables are essential building blocks of Python programs, allowing you to store and manipulate data
+                effectively. By understanding how to declare, assign, and use variables, you can write more dynamic and
+                powerful Python code to solve a wide range of problems. As you continue your journey with Python
+                programming, mastering variables will be a key step towards becoming a proficient developer.</p>
+        </div>
+        <div class="math" id="math">
+            <h2 class="section">Math in Python</h2>
+            <p>Python provides powerful built-in functions and modules for mathematical operations, making it a
+                versatile tool for numerical computation and data analysis. Whether you're performing basic arithmetic,
+                working with complex numbers, or implementing advanced mathematical algorithms, Python's rich ecosystem
+                of libraries and tools has you covered.</p>
+            <h2 id="basic-arithmetic">Basic Arithmetic Operations</h2>
+            <p>Python supports all the standard arithmetic operations, including addition, subtraction, multiplication,
+                division, and exponentiation. Here's how you can perform these operations:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content3')">Copy Code</button>
+                </div>
+                <div class="content" id="content3">
+                    <p class="comment"># Basic arithmetic operations</p>
+                    <p>x = <span class="red">10</span></p>
+                    <p>y = <span class="red">5</span></p><br>
+                    <p>addition = x + y</p>
+                    <p>subtraction = x - y</p>
+                    <p>multiplication = x * y</p>
+                    <p>division = x / y</p>
+                    <p>exponentiation = x ** y</p><br>
+                    <p><span class="yellow">print</span> (<span class="green">"addition:"</span>, addition)</p>
+                    <p><span class="yellow">print</span> (<span class="green">"subtraction:"</span>, subtraction)</p>
+                    <p><span class="yellow">print</span> (<span class="green">"multiplication:"</span>, multiplication)
+                    </p>
+                </div>
+            </div>
+            <h2 id="math-module">Math Module</h2>
+            <p>Python's math module provides access to various mathematical functions and constants. You can use
+                functions like sqrt(), sin(), cos(), tan(), log(), and many more for advanced mathematical calculations.
+                Here's an example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content4')">Copy Code</button>
+                </div>
+                <div class="content" id="content4">
+                    <p><span class="blue">import</span> math</p><br>
+                    <p class="comment"># Using math module</p>
+                    <p>num = <span class="red">16</span></p><br>
+                    <p>square_root = math.sqrt(num)</p>
+                    <p>sin_value = math.sin(math.pi / <span class="red">2</span>) <span class="comment"># Sine of
+                            π/2</span></p>
+                    <p>cos_value = math.cos(<span class="red">0</span>) <span class="comment"># Sine of 0</span></p>
+                    <p>log_value = math.log(<span class="red">10</span>) <span class="comment"># Natural logarithm of
+                            10</span></p><br>
+                    <p><span class="yellow">print</span>(<span class="green">"Square root of"</span>, num, <span
+                            class="green">"is"</span>, square_root)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Sine of π/2 is"</span>, sin_value)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Cosine of 0 is"</span>, cos_value)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Natural logarithm of 10 is"</span>,
+                        log_value)</p>
+                </div>
+            </div>
+            <h2 id="complex-numbers">Complex Numbers</h2>
+            <p>Python supports complex numbers and provides built-in functions for complex arithmetic. You can perform
+                operations like addition, subtraction, multiplication, division, and exponentiation on complex numbers.
+                Here's a simple example</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button onclick="copyText('#content5')" class="copy-button">Copy Code</button>
+                </div>
+                <div class="content" id="content5">
+                    <p class="comment"># Complex numbers</p>
+                    <p>z1 = <span class="red">2</span> + <span class="red">3j</span></p>
+                    <p>z2 = <span class="red">4</span> - <span class="red">5j</span></p><br>
+                    <p>addition = z1 + z2</p>
+                    <p>multiplication = z1 * z2</p>
+                    <p>conjugate = z1.conjugate() <span class="comment"># Conjugate of z1</span></p><br>
+                    <p><span class="yellow">print</span>(<span class="green">"Addition of"</span>, z1, <span
+                            class="green">"and"</span>, z2, <span class="green">"is"</span>, addition)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Multiplication of"</span>, z1, <span
+                            class="green">"and"</span>, z2, <span class="green">"is"</span>, multiplication)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Conjugate of"</span>, z1, <span
+                            class="green">"is"</span>, conjugate)</p>
+                </div>
+            </div>
+            <h2 id="numPy-library">NumPy Library</h2>
+            <p>For more advanced mathematical operations and numerical computations, the NumPy library is widely used in
+                the Python ecosystem. NumPy provides support for arrays, matrices, and a wide range of mathematical
+                functions, making it a powerful tool for scientific computing.</p>
+            <h2 id="math-conclusion">Conclusion</h2>
+            <p>Python offers a comprehensive set of tools for mathematical computation, ranging from basic arithmetic
+                operations to advanced mathematical functions and complex number support. Whether you're a beginner
+                learning the basics of programming or an experienced data scientist working on advanced numerical
+                analysis, Python's mathematical capabilities make it an excellent choice for a wide range of
+                applications. With Python, you have the flexibility and power to tackle virtually any mathematical
+                problem efficiently and effectively.</p>
+        </div>
+        <div class="stringmethods" id="stringmethods">
+            <h2 class="section">String methods</h2>
+            <p>Strings are a fundamental data type in Python, representing sequences of characters enclosed within
+                single, double, or triple quotes. Python provides a rich set of built-in methods for manipulating and
+                working with strings. These string methods allow you to perform various operations, such as searching,
+                modifying, and formatting strings, making Python an excellent choice for text processing tasks.</p>
+            <P>Common String Methods:</P>
+            <ol>
+                <li>
+                    <p><b>'len():'</b> Returns the length of a string, i.e., the number of characters in the string.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content6')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content6">
+                            <p>string = <span class="green">"Hello, World!"</span></p>
+                            <p>length = <span class="yellow">len</span>(string) <span class="comment"># Output:
+                                    13</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'upper()' and 'lower()':</b> Convert a string to uppercase or lowercase, respectively.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content7')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content7">
+                            <p>string = <span class="green">"Hello, World!"</span></p>
+                            <p>uppercase = string.upper() <span class="comment"># Output: "HELLO, WORLD!"</span></p>
+                            <p>lowercase = string.lower() <span class="comment"># Output: "hello, world!"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'strip()', 'lstrip()', and 'rstrip()':</b> Remove leading and trailing whitespace (or specified characters) from a string.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content8')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content8">
+                            <p>string = <span class="green">" Hello, World! "</span></p>
+                            <p>stripped = string.strip() <span class="comment"># Output: "Hello, World!"</span></p>
+                            <p>lstripped = string.lstrip() <span class="comment"># Output: "Hello, World!   "</span></p>
+                            <p>rstripped = string.rstrip() <span class="comment"># Output: "   Hello, World!"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'split()':</b> Split a string into a list of substrings based on a delimiter.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content9')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content9">
+                            <p>string = <span class="green">"apple,banana,orange"</span></p>
+                            <p>fruits = string.split(<span class="green">","</span>) <span class="comment"># Output: "apple,banana,orange"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'join()':</b> Concatenate elements of an iterable (e.g., a list) into a single string using a specified separator.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content10')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content10">
+                            <p>fruits = [<span class="green">'apple','banana','orange'</span>]</p>
+                            <p>string = <span class="green">","</span>.join(fruits) <span class="comment"># Output: "apple,banana,orange"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'find()', 'index()', and 'count()':</b> Search for substrings within a string, returning the index of the first occurrence <b>('find()')</b>, raising an error if not found <b>('index()')</b>, or counting the occurrences <b>('count()')</b>.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content11')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content11">
+                            <p>string = <span class="green">"hello, hello, world!"</span></p>
+                            <p>index = string.find(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>index = string.index(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>count = string.count(<span class="green">"hello"</span>) <span class="comment"># Output: 2</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'replace()':</b> Replace occurrences of a substring with another substring.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content12')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content12">
+                            <p>string = <span class="green">"hello, hello, world!"</span></p>
+                            <p>index = string.find(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>index = string.index(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>count = string.count(<span class="green">"hello"</span>) <span class="comment"># Output: 2</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'startswith()' and 'endswith()':</b> Check if a string starts or ends with a specified substring.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content13')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content13">
+                            <p>string = <span class="green">"Hello, World!"</span></p>
+                            <p>starts = string.startswith(<span class="green">"Hello"</span>) <span class="comment"># Output: True</span></p>
+                            <p>ends = string.endswith(<span class="green">"World!"</span>) <span class="comment"># returns: False</span></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="functions" id="functions">
+            <h2 class="section">Functions</h2>
+        </div>
+    </main>
+</body>
+
+</html>
