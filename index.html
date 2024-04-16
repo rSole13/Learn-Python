@@ -1,0 +1,1145 @@
+<html lang="en">
+<!--This webpage used ChatGPT to generate the text and explanations-->
+
+<head>
+    <title>Learn Python</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar" onmouseover="enableNavScroll()" onmouseleave="disableNavScroll()">
+        <a href="#index" class="nav-item">Index</a>
+        <a href="#intro" class="nav-item">Introduction</a>
+        <a href="#var" class="nav-item"> Variables</a>
+        <div class="submenu">
+            <a href="#what-is-a-variable"> - What is a variable</a>
+            <a href="#variable-naming-rules"> - Naming rules</a>
+            <a href="#assigning-values"> - Assigning values</a>
+            <a href="#data-types"> - Data types</a>
+            <a href="#using-variables"> - Using variables</a>
+            <a href="#var-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#math" class="nav-item"> Math</a>
+        <div class="submenu">
+            <a href="#basic-arithmetic"> - Basic arithmetic</a>
+            <a href="#math-module"> - Math module</a>
+            <a href="#complex-numbers"> - Complex numbers</a>
+            <a href="#numPy-library"> - NumPy library</a>
+            <a href="#math-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#stringmethods" class="nav-item"> String methods</a>
+        <a href="#functions" class="nav-item"> Functions</a>
+        <div class="submenu">
+            <a href="#defining-a-function"> - Defining a function</a>
+            <a href="#calling-a-function"> - Calling a function</a>
+            <a href="#parameters"> - Parameters & arguments</a>
+            <a href="#return"> - Return</a>
+            <a href="#default-parameters"> - Default parameters</a>
+            <a href="#docstrings"> - Docstrings</a>
+            <a href="#scope-of-variables"> - Scope of variables</a>
+            <a href="#func-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#if-elif-else" class="nav-item">If-Elif-Else Statement</a>
+        <div class="submenu">
+            <a href="#if"> - If statement</a>
+            <a href="#elif"> - Elif statement</a>
+            <a href="#else"> - Else statement</a>
+            <a href="#comparisons"> - Comparisons</a>
+            <a href="#if-elif-else-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#forloops" class="nav-item">For Loop</a>
+        <div class="submenu">
+            <a href="#forloops-syntax"> - Sintax</a>
+            <a href="#range-function"> - Range function</a>
+            <a href="#forloops-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#while" class="nav-item">While Loop</a>
+        <div class="submenu">
+            <a href="#while-sintax"> - Sintax</a>
+            <a href="#inf-loops"> - Infinite loops</a>
+            <a href="#while-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#lists" class="nav-item">Lists</a>
+        <div class="submenu">
+            <a href="#creating-lists"> - Creating lists</a>
+            <a href="#accessing-elements"> - Accessing elemets</a>
+            <a href="#modifying-lists"> - Modifying elemets</a>
+            <a href="#list-operations"> - List operations</a>
+            <a href="#lists-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#tryexcept" class="nav-item">Try/Except</a>
+        <div class="submenu">
+            <a href="#tryexcept-syntax"> - Syntax</a>
+            <a href="#multiple-except-blocks"> - Multiple excepts</a>
+            <a href="#finally-block"> - Finally block</a>
+            <a href="#tryexcept-conclusion"> - Conclusion</a>
+        </div>
+        <a href="#exercices" class="nav-item">Exercices</a>
+        <div class="submenu">
+            <a href="#fibonacci-sequence"> - Fibonacci sequence</a>
+            <a href="#numbers-less-than-10"> - Numbers less than 10</a>
+            <a href="#check-palindrome"> - Check palindrome</a>
+        </div>
+        <br><br><br>
+    </nav>
+    <main>
+        <header>
+            <h1>Learn Python</h1>
+            <p>By: Roger Solé Ramon</p>
+        </header><br>
+        <index id="index">
+            <h2 class="section">INDEX:</h2>
+            <ul class="index-text">
+                <li><a href="#intro">Introduction to Python</a></li>
+                <li><a href="#var">Variables</a></li>
+                <li><a href="#math">Math</a></li>
+                <li><a href="#stringmethods">String Methods</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#if-elif-else">If/Elif/Else</a></li>
+                <li><a href="#forloops">For Loops</a></li>
+                <li><a href="#while">While Loops</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tryexcept">Try/Except</a></li>
+                <li><a href="#exercices">Exercices</a></li>
+            </ul>
+        </index>
+        <div class="introduction" id="intro">
+            <div>
+                <h2 class="section">Introduction to Python</h2>
+                <p>Python is a versatile and powerful programming language known for its simplicity and readability.
+                    Whether you're a beginner taking your first steps into the world of coding or an experienced
+                    developer looking to expand your skill set, Python has something to offer for everyone.</p>
+                <h2>Why Python?</h2>
+                <p>There are numerous reasons why Python has become one of the most popular programming languages in the
+                    world:</p>
+                <ol>
+                    <li> <b>Easy to Learn:</b> Python's simple and straightforward syntax makes it easy for beginners to
+                        grasp programming concepts quickly.</li><br>
+                    <li> <b>Versatile:</b> Python is suitable for a wide range of applications, including web
+                        development, data analysis, artificial intelligence, machine learning, automation, and more.
+                    </li><br>
+                    <li> <b>Large Standard Library:</b> Python comes with a comprehensive standard library that provides
+                        ready-to-use modules and functions for various tasks, reducing the need to write code from
+                        scratch.</li><br>
+                    <li> <b>Community and Ecosystem:</b> Python boasts a vast and active community of developers who
+                        contribute to libraries, frameworks, and tools, making it easier to find support and resources.
+                    </li><br>
+                    <li> <b>Cross-Platform Compatibility:</b> Python is available on all major operating systems,
+                        including Windows, macOS, and Linux, ensuring code portability across different platforms.</li>
+                    <br>
+                    <li> <b>Source:</b> Python is free and open-source, allowing anyone to contribute to its development
+                        and ensuring transparency and accessibility.</li>
+                </ol>
+            </div>
+            <div>
+                <h2>What Can You Do with Python?</h2>
+                <p>The versatility of Python means you can use it for a wide range of projects and applications,
+                    including:</p>
+                <ol>
+                    <li> <b>Web Development:</b> Build dynamic websites and web applications using frameworks like
+                        Django and Flask.</li><br>
+                    <li> <b>Data Analysis and Visualization:</b> Analyze large datasets and create interactive
+                        visualizations using libraries such as Pandas, NumPy, and Matplotlib.</li><br>
+                    <li> <b>Artificial Intelligence and Machine Learning:</b> Develop machine learning models and AI
+                        applications with libraries like TensorFlow, Keras, and Scikit-learn.</li><br>
+                    <li> <b>Scripting and Automation:</b> Automate repetitive tasks and create scripts to streamline
+                        workflows.</li><br>
+                    <li> <b>Game Development:</b> Create games using libraries like Pygame.</li><br>
+                    <li> <b>Desktop GUI Applications:</b> Build desktop applications with graphical user interfaces
+                        using libraries like Tkinter or PyQt.</li>
+                </ol>
+            </div>
+            <div>
+                <h2>Getting Started</h2>
+                <p>To start coding in Python, all you need is a text editor and the Python interpreter installed on your
+                    computer. You can download Python for free from the official website <a
+                        href="https://www.python.org">https://www.python.org</a> and follow the installation
+                    instructions for your operating system.</p>
+                <p>Once Python is installed, you can write Python code in a plain text editor or use integrated
+                    development environments (IDEs) like PyCharm, Visual Studio Code, or Jupyter Notebook, which offer
+                    features like syntax highlighting, code completion, and debugging tools to enhance your coding
+                    experience.</p>
+            </div>
+            <div>
+                <h2>Conclusion</h2>
+                <p>Python's simplicity, versatility, and vibrant community make it an excellent choice for programmers
+                    of all levels. Whether you're building websites, analyzing data, creating AI applications, or
+                    exploring new technologies, Python provides the tools and resources you need to bring your ideas to
+                    life. So, dive in, start coding, and unlock the endless possibilities of Python programming!</p>
+            </div>
+        </div>
+        <div class="variables" id="var">
+            <h2 class="section">Variables in Python</h2>
+            <p>Variables are fundamental elements in programming languages like Python. They serve as <span
+                    class="red"><b>containers to store data values</b></span> that can be manipulated and referenced
+                throughout a program. Understanding variables is crucial for any Python developer, as they play a
+                central role in storing and managing information within a program.</p>
+            <h2 id="what-is-a-variable">What is a Variable?</h2>
+            <p>In Python, a variable is a symbolic name that represents a <span class="red"><b>value stored in computer
+                        memory</b></span>. Think of variables as labeled boxes where you can store different types of
+                data, such as numbers, strings, lists, or more complex data structures. These values can be modified,
+                reassigned, and used in various operations within your code</p>
+            <h2 id="variable-naming-rules">Variable Naming Rules</h2>
+            <p>When naming variables in Python, there are some rules to follow:</p>
+            <ol>
+                <li>Variable names must start with a letter (a-z, A-Z) or an underscore (_).</li>
+                <li>The subsequent characters in a variable name can be letters, numbers (0-9), or underscores</li>
+                <li>Variable names are case-sensitive, meaning <b>'myVariable'</b> and <b>'myvariable'</b> would be
+                    treated as different variables.</li>
+                <li>Python keywords (reserved words like <b>'if'</b>, <b>'for'</b>, <b>'while'</b>, etc.) cannot be used
+                    as variable names.</li>
+            </ol>
+            <h2 id="assigning-values">Assigning Values to Variables</h2>
+            <p>In Python, you can assign values to variables using the assignment operator (=). Here's a basic example:
+            </p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content1')">Copy Code</button>
+                </div>
+                <div class="content" id="content1">
+                    <p class="comment"># Assigning values to variables</p>
+                    <p>x = <span class="red">10</span></p>
+                    <p>name = <span class="green">"John Doe"</span></p>
+                </div>
+            </div>
+            <p>In this example, x is assigned the value 10, and name is assigned the string "John Doe". Python infers
+                the data type based on the value assigned to the variable, so you don't need to explicitly declare the
+                data type.</p>
+            <h2 id="data-types">Variable Data Types</h2>
+            <p>Python is dynamically typed, meaning you don't need to declare the data type of a variable explicitly.
+                Instead, Python determines the data type dynamically based on the value assigned to it. Some common data
+                types in Python include:</p>
+            <ul>
+                <li><b>Integer (int): </b>Whole numbers without decimal points, such as <b> '10', '-5', '1000'.</b></li>
+                <li><b>Float (float): </b>Numbers with decimal points, such as <b>'3.14', '-0.5, '2.718'</b></li>
+                <li><b>String (str): </b>Sequence of characters enclosed within single (') or double (") quotes, such as
+                    <b>"Hello", 'Python', "123".</b>
+                </li>
+                <li><b>Boolean (bool): </b>Represents either <b>True or False.</b></li>
+                <li><b>List, Tuple, Dictionary, Set: </b>More complex data structures used to store collections of
+                    values.</li>
+            </ul>
+            <h2 id="using-variables">Using Variables</h2>
+            <p>Once you've assigned values to variables, you can perform various operations using them:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content2')">Copy Code</button>
+                </div>
+                <div class="content" id="content2">
+                    <p class="comment"># Performing operations using variables</p>
+                    <p>x = <span class="red">10</span></p>
+                    <p>y = <span class="red">20</span></p>
+                    <p><span class="yellow">sum</span> = x + y</p>
+                    <p><span class="yellow">print</span>(<span class="green">"The sum of"</span>, x, <span
+                            class="green">"and"</span>, y, <span class="green">"is"</span>, <span
+                            class="yellow">sum</span>)</p>
+                </div>
+            </div>
+            <p>In this example, we define two variables x and y, then calculate their sum and print the result using the
+                print() function.</p>
+            <h2 id="var-conclusion">Conclusion</h2>
+            <p>Variables are essential building blocks of Python programs, allowing you to store and manipulate data
+                effectively. By understanding how to declare, assign, and use variables, you can write more dynamic and
+                powerful Python code to solve a wide range of problems. As you continue your journey with Python
+                programming, mastering variables will be a key step towards becoming a proficient developer.</p>
+        </div>
+        <div class="math" id="math">
+            <h2 class="section">Math in Python</h2>
+            <p>Python provides powerful built-in functions and modules for mathematical operations, making it a
+                versatile tool for numerical computation and data analysis. Whether you're performing basic arithmetic,
+                working with complex numbers, or implementing advanced mathematical algorithms, Python's rich ecosystem
+                of libraries and tools has you covered.</p>
+            <h2 id="basic-arithmetic">Basic Arithmetic Operations</h2>
+            <p>Python supports all the standard arithmetic operations, including addition, subtraction, multiplication,
+                division, and exponentiation. Here's how you can perform these operations:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content3')">Copy Code</button>
+                </div>
+                <div class="content" id="content3">
+                    <p class="comment"># Basic arithmetic operations</p>
+                    <p>x = <span class="red">10</span></p>
+                    <p>y = <span class="red">5</span></p><br>
+                    <p>addition = x + y</p>
+                    <p>subtraction = x - y</p>
+                    <p>multiplication = x * y</p>
+                    <p>division = x / y</p>
+                    <p>exponentiation = x ** y</p><br>
+                    <p><span class="yellow">print</span> (<span class="green">"addition:"</span>, addition)</p>
+                    <p><span class="yellow">print</span> (<span class="green">"subtraction:"</span>, subtraction)</p>
+                    <p><span class="yellow">print</span> (<span class="green">"multiplication:"</span>, multiplication)
+                    </p>
+                </div>
+            </div>
+            <h2 id="math-module">Math Module</h2>
+            <p>Python's math module provides access to various mathematical functions and constants. You can use
+                functions like sqrt(), sin(), cos(), tan(), log(), and many more for advanced mathematical calculations.
+                Here's an example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content4')">Copy Code</button>
+                </div>
+                <div class="content" id="content4">
+                    <p><span class="blue">import</span> math</p><br>
+                    <p class="comment"># Using math module</p>
+                    <p>num = <span class="red">16</span></p><br>
+                    <p>square_root = math.sqrt(num)</p>
+                    <p>sin_value = math.sin(math.pi / <span class="red">2</span>) <span class="comment"># Sine of
+                            π/2</span></p>
+                    <p>cos_value = math.cos(<span class="red">0</span>) <span class="comment"># Sine of 0</span></p>
+                    <p>log_value = math.log(<span class="red">10</span>) <span class="comment"># Natural logarithm of
+                            10</span></p><br>
+                    <p><span class="yellow">print</span>(<span class="green">"Square root of"</span>, num, <span
+                            class="green">"is"</span>, square_root)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Sine of π/2 is"</span>, sin_value)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Cosine of 0 is"</span>, cos_value)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Natural logarithm of 10 is"</span>,
+                        log_value)</p>
+                </div>
+            </div>
+            <h2 id="complex-numbers">Complex Numbers</h2>
+            <p>Python supports complex numbers and provides built-in functions for complex arithmetic. You can perform
+                operations like addition, subtraction, multiplication, division, and exponentiation on complex numbers.
+                Here's a simple example</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button onclick="copyText('#content5')" class="copy-button">Copy Code</button>
+                </div>
+                <div class="content" id="content5">
+                    <p class="comment"># Complex numbers</p>
+                    <p>z1 = <span class="red">2</span> + <span class="red">3j</span></p>
+                    <p>z2 = <span class="red">4</span> - <span class="red">5j</span></p><br>
+                    <p>addition = z1 + z2</p>
+                    <p>multiplication = z1 * z2</p>
+                    <p>conjugate = z1.conjugate() <span class="comment"># Conjugate of z1</span></p><br>
+                    <p><span class="yellow">print</span>(<span class="green">"Addition of"</span>, z1, <span
+                            class="green">"and"</span>, z2, <span class="green">"is"</span>, addition)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Multiplication of"</span>, z1, <span
+                            class="green">"and"</span>, z2, <span class="green">"is"</span>, multiplication)</p>
+                    <p><span class="yellow">print</span>(<span class="green">"Conjugate of"</span>, z1, <span
+                            class="green">"is"</span>, conjugate)</p>
+                </div>
+            </div>
+            <h2 id="numPy-library">NumPy Library</h2>
+            <p>For more advanced mathematical operations and numerical computations, the NumPy library is widely used in
+                the Python ecosystem. NumPy provides support for arrays, matrices, and a wide range of mathematical
+                functions, making it a powerful tool for scientific computing.</p>
+            <h2 id="math-conclusion">Conclusion</h2>
+            <p>Python offers a comprehensive set of tools for mathematical computation, ranging from basic arithmetic
+                operations to advanced mathematical functions and complex number support. Whether you're a beginner
+                learning the basics of programming or an experienced data scientist working on advanced numerical
+                analysis, Python's mathematical capabilities make it an excellent choice for a wide range of
+                applications. With Python, you have the flexibility and power to tackle virtually any mathematical
+                problem efficiently and effectively.</p>
+        </div>
+        <div class="stringmethods" id="stringmethods">
+            <h2 class="section">String methods</h2>
+            <p>Strings are a fundamental data type in Python, representing sequences of characters enclosed within
+                single, double, or triple quotes. Python provides a rich set of built-in methods for manipulating and
+                working with strings. These string methods allow you to perform various operations, such as searching,
+                modifying, and formatting strings, making Python an excellent choice for text processing tasks.</p>
+            <P>Common String Methods:</P>
+            <ol>
+                <li>
+                    <p><b>'len():'</b> Returns the length of a string, i.e., the number of characters in the string.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content6')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content6">
+                            <p>string = <span class="green">"Hello, World!"</span></p>
+                            <p>length = <span class="yellow">len</span>(string) <span class="comment"># Output:
+                                    13</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'upper()' and 'lower()':</b> Convert a string to uppercase or lowercase, respectively.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content7')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content7">
+                            <p>string = <span class="green">"Hello, World!"</span></p>
+                            <p>uppercase = string.upper() <span class="comment"># Output: "HELLO, WORLD!"</span></p>
+                            <p>lowercase = string.lower() <span class="comment"># Output: "hello, world!"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'strip()', 'lstrip()', and 'rstrip()':</b> Remove leading and trailing whitespace (or specified characters) from a string.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content8')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content8">
+                            <p>string = <span class="green">" Hello, World! "</span></p>
+                            <p>stripped = string.strip() <span class="comment"># Output: "Hello, World!"</span></p>
+                            <p>lstripped = string.lstrip() <span class="comment"># Output: "Hello, World! "</span></p>
+                            <p>rstripped = string.rstrip() <span class="comment"># Output: " Hello, World!"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'split()':</b> Split a string into a list of substrings based on a delimiter.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content9')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content9">
+                            <p>string = <span class="green">"apple,banana,orange"</span></p>
+                            <p>fruits = string.split(<span class="green">","</span>) <span class="comment"># Output: "apple,banana,orange"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'join()':</b> Concatenate elements of an iterable (e.g., a list) into a single string using a specified separator.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content10')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content10">
+                            <p>fruits = [<span class="green">'apple','banana','orange'</span>]</p>
+                            <p>string = <span class="green">","</span>.join(fruits) <span class="comment"># Output: "apple,banana,orange"</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'find()', 'index()', and 'count()':</b> Search for substrings within a string, returning the index of the first occurrence <b>('find()')</b>, raising an error if not found <b>('index()')</b>, or counting the occurrences <b>('count()')</b>.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content11')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content11">
+                            <p>string = <span class="green">"hello, hello, world!"</span></p>
+                            <p>index = string.find(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>index = string.index(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>count = string.count(<span class="green">"hello"</span>) <span class="comment"># Output: 2</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'replace()':</b> Replace occurrences of a substring with another substring.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content12')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content12">
+                            <p>string = <span class="green">"hello, hello, world!"</span></p>
+                            <p>index = string.find(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>index = string.index(<span class="green">"hello"</span>) <span class="comment"># Output: 0</span></p>
+                            <p>count = string.count(<span class="green">"hello"</span>) <span class="comment"># Output: 2</span></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <p><b>'startswith()' and 'endswith()':</b> Check if a string starts or ends with a specified substring.</p>
+                    <div class="code">
+                        <div class="header">
+                            <div class="title">python</div>
+                            <button class="copy-button" onclick="copyText('#content13')">Copy Code</button>
+                        </div>
+                        <div class="content" id="content13">
+                            <p>string = <span class="green">"Hello, World!"</span></p>
+                            <p>starts = string.startswith(<span class="green">"Hello"</span>) <span class="comment"># Output: True</span></p>
+                            <p>ends = string.endswith(<span class="green">"World!"</span>) <span class="comment"># returns: False</span></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="functions" id="functions">
+            <h2 class="section">Functions</h2>
+            <p>In Python, a function is a block of reusable code that performs a specific task. Functions are essential for organizing code, improving readability, and promoting reusability. They allow you to break down complex tasks into smaller, manageable parts.</p>
+            <h2 id="defining-a-function">Defining a Function</h2>
+            <p>You can define a function using the <b>'def'</b> keyword followed by the function name and parentheses <b>'()'</b>, which may include parameters. The function body is indented and contains the code to be executed when the function is called.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content14')">Copy Code</button>
+                </div>
+                <div class="content" id="content14">
+                    <p><span class="blue">def</span> <span class="red">greet</span>():</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"Hello, world!"</span>)</p>
+                </div>
+            </div>
+            <h2 id="calling-a-function">Calling a Function</h2>
+            <p>To execute a function, you simply write its name followed by parentheses <b>'()'</b>. If the function takes parameters, you pass them inside the parentheses.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content15')">Copy Code</button>
+                </div>
+                <div class="content" id="content15">
+                    <p>greet() <span class="comment"># Output: Hello, world!</span></p>
+                </div>
+            </div>
+            <h2 id="parameters">Parameters and Arguments</h2>
+            <p>Functions can accept parameters, which are variables that hold the data passed to the function when it's called. You specify parameters within the parentheses in the function definition. When calling the function, you provide arguments, which are the actual values passed to the parameters.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content16')">Copy Code</button>
+                </div>
+                <div class="content" id="content16">
+                    <p><span class="blue">def</span> <span class="red">greet</span>(name):</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"Hello, "</span> + name + <span class="green">"!"</span>)</p><br>
+                    <p>greet(<span class="green">"Alice"</span>) <span class="comment"># Output: Hello, Alice!</span></p>
+                </div>
+            </div>
+            <h2 id="return">Return Statement</h2>
+            <p>Functions can return values using the <b>'return'</b> statement. This allows functions to compute a result and pass it back to the caller.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content17')">Copy Code</button>
+                </div>
+                <div class="content" id="content17">
+                    <p><span class="blue">def</span> <span class="red">add</span>(x + y):</p>
+                    <p class="tab"><span class="blue">return</span> x + y</p><br>
+                    <p>result = add(<span class="red">3</span>, <span class="red">5</span>)</p>
+                    <p><span class="yellow">print</span>(result) <span class="comment"># Output: 8</span></p>
+                </div>
+            </div>
+            <h2 id="default-parameters">Default Parameters</h2>
+            <p>You can specify default values for parameters in a function. If a parameter is not provided when calling the function, it will use the default value.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content18')">Copy Code</button>
+                </div>
+                <div class="content" id="content18">
+                    <p><span class="blue">def</span> <span class="red">greet</span>(name=<span class="green">"world"</span>):</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"Hello, "</span> + name + <span class="green">"!"</span>)</p><br>
+                    <p>greet() <span class="comment"># Output: Hello, world!</span></p>
+                    <p>greet(<span class="green">"Alice"</span>) <span class="comment"># Output: Hello, Alice!</span></p>
+                </div>
+            </div>
+            <h2 id="docstrings">Docstrings</h2>
+            <p>Docstrings are optional strings enclosed in triple quotes <b>'"""'</b> that provide documentation for functions. They describe what the function does, its parameters, and return values. Docstrings are accessible using the <b>'__doc__'</b> attribute of the function.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content19')">Copy Code</button>
+                </div>
+                <div class="content" id="content19">
+                    <p><span class="blue">def</span> <span class="red">greet</span>(name):</p>
+                    <p class="tab"><span class="green">"""</span></p>
+                    <p class="tab"><span class="green">Greets the user by their name.</span></p>
+                    <p class="tab"><span class="green">Parameters:</span></p>
+                    <p class="tab"><span class="green">- name (str): The name of the user.</span></p>
+                    <p class="tab"><span class="green">"""</span></p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"Hello, "</span> + name + <span class="green">"!"</span>)</p><br>
+                    <p><span class="yellow">print</span>(greet.__doc__)</p>
+                </div>
+            </div>
+            <h2 id="scope-of-variables">Scope of Variables</h2>
+            <p>Variables defined inside a function are local to that function and cannot be accessed outside it. Variables defined outside functions are global and can be accessed from any part of the code.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content20')">Copy Code</button>
+                </div>
+                <div class="content" id="content20">
+                    <p>global_var = <span class="red">10</span></p><br>
+                    <p><span class="blue">def</span> <span class="red">my_func</span>():</p>
+                    <p class="tab">local_var = <span class="red">20</span></p>
+                    <p class="tab"><span class="yellow">print</span>(global_var) <span class="comment"># Output: 10</span></p>
+                    <p class="tab"><span class="yellow">print</span>(local_var) <span class="comment"># Output: 20</span></p><br>
+                    <p>my_func()</p>
+                    <p><span class="yellow">print</span>(global_var) <span class="transparent"></span><span class="comment"># Output: 10</span></p>
+                    <p><span class="yellow">print</span>(local_var) <span class="transparent"></span><span class="comment"># Error: NameError: name 'local_var' is not defined</span></p>
+                </div>
+            </div>
+            <h2 id="func-conclusion">Conclusion</h2>
+            <p>Functions are fundamental building blocks in Python programming. They help you modularize your code, improve maintainability, and facilitate code reuse. Understanding how to define, call, and use functions effectively is essential for writing clean and efficient Python code.</p>
+        </div>
+        <div class="if-elif-else" id="if-elif-else">
+            <h2 class="section">If/Elif/Else Statements</h2>
+            <p>In Python, <b>'if'</b>, <b>'elif'</b> (short for "else if"), and <b>'else'</b> are control flow statements that allow you to make decisions in your code based on certain conditions. These statements enable you to execute different blocks of code depending on whether specific conditions are true or false.</p>
+            <h2 id="if">The <b>'if'</b> Statement</h2>
+            <p>The <b>'if'</b> statement is used to execute a block of code only if a specified condition evaluates to <b>'True'</b>. It has the following syntax:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content21')">Copy Code</button>
+                </div>
+                <div class="content" id="content21">
+                    <p><span class="blue">if</span> condition:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed if the condition is True</span></p>
+                </div>
+            </div>
+            <p>Example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content22')">Copy Code</button>
+                </div>
+                <div class="content" id="content22">
+                    <p>x = <span class="red">10</span></p>
+                    <p><span class="blue">if</span> x > <span class="red">5</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"x is greater than 5"</span>)</p>
+                </div>
+            </div>
+            <h2 id="elif">The 'elif' Statement</h2>
+            <P>The <b>'elif'</b> statement is used to check additional conditions if the previous <b>'if'</b> or <b>'elif'</b> conditions are not met. It allows you to handle multiple conditions in a sequence. It has the following syntax:</P>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content23')">Copy Code</button>
+                </div>
+                <div class="content" id="content23">
+                    <p><span class="blue">if</span> condition1:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed if condition1 is True</span></p>
+                    <p><span class="blue">if</span> condition2:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed if condition1 is True</span></p>
+                    <p><span class="blue">if</span> condition3:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed if condition1 is True</span></p>
+                    <p>...</p>
+                    <p><span class="blue">else:</span></p>
+                    <p class="tab"><span class="comment"># Code block to be executed if none of the above conditions are True</span></p>
+                </div>
+            </div>
+            <p>Example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content24')">Copy Code</button>
+                </div>
+                <div class="content" id="content24">
+                    <p>x = <span class="red">10</span></p>
+                    <p><span class="blue">if</span> x > <span class="red">5</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"x is greater than 5"</span>)</p>
+                    <p><span class="blue">elif</span> x == <span class="red">5</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"x is equal to 5"</span>)</p>
+                    <p><span class="blue">else</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"x is less than 5"</span>)</p>
+                </div>
+            </div>
+            <h2 id="else">The 'else' Statement</h2>
+            <p>The <b>'else'</b> statement is used to execute a block of code if none of the preceding conditions in the <b>'if'</b> or <b>'elif'</b> statements are true. It is optional and can only appear at the end of an <b>'if'-'elif'-'else'</b> chain. It has the following syntax:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content25')">Copy Code</button>
+                </div>
+                <div class="content" id="content25">
+                    <p><span class="blue">if</span> condition:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed if the condition is True</span></p>
+                    <p><span class="blue">else</span>:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed if the condition is False</span></p>
+                </div>
+            </div>
+            <p>Example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content26')">Copy Code</button>
+                </div>
+                <div class="content" id="content26">
+                    <p>x = <span class="red">10</span></p>
+                    <p><span class="blue">if</span> x > <span class="red">5</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"x is greater than 5"</span>)</p>
+                    <p><span class="blue">else</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"x is less than or equal to 5"</span>)</p>
+                </div>
+            </div>
+            <h2 id="comparisons">Comparisons</h2>
+            <p>In Python, comparisons are used to evaluate the relationship between two values or expressions. Here's an explanation of the different comparison operators:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content27')">Copy Code</button>
+                </div>
+                <div class="content" id="content27">
+                    <p>== <span class="comment"># Equal to</span></p>
+                    <p>!= <span class="comment"># Not equal to</span></p>
+                    <p>> <span class="comment"># Greater than</span></p>
+                    <p>>= <span class="comment"># Greater than or Equal to</span></p>
+                    <p>< <span class="comment"># Less than</span></p>
+                    <p><= <span class="comment"># Less than or Equal to</span></p>
+                </div>
+            </div>
+            <p>These comparison operators are fundamental in Python for evaluating conditions in control flow statements such as <b>'if'</b>, <b>'elif'</b>, and <b>'while'</b> loops. They allow you to make decisions and control the flow of your program based on the relationships between values or expressions.</p>
+            <h2 id="if-elif-else-conclusion">Conclusion</h2>
+            <p>The <b>'if'</b>, <b>'elif'</b>, and <b>'else'</b> statements in Python provide a powerful way to control the flow of your code based on conditions. By using these statements effectively, you can write programs that make decisions and respond accordingly, enhancing the flexibility and logic of your code.</p>
+        </div>
+        <div class="forloops" id="forloops">
+            <h2 class="section">For Loops</h2>
+            <p>In Python, loops are control flow structures that allow you to repeatedly execute a block of code multiple times. They are essential for automating repetitive tasks, iterating over collections of data, and implementing algorithms that require repeated execution.</p>
+            <p>The for loop is used to iterate over a sequence (such as a list, tuple, string, or range) and execute a block of code for each element in the sequence. It is often used when the number of iterations is known in advance.</p>
+            <h2 id="forloops-syntax">Syntax</h2>
+            <p>The syntax of the <b>'for'</b> loop in Python is as follows:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content28')">Copy Code</button>
+                </div>
+                <div class="content" id="content28">
+                    <p><span class="blue">for</span> element <span class="blue">in</span> sequence:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed for each element in the sequence</span></p>
+                </div>
+            </div>
+            <p>Here's a breakdown of the syntax:</p>
+            <ul>
+                <li><b>'element'</b> is a variable that represents each individual element in the sequence during each iteration.</li>
+                <li><b>'sequence'</b> is the collection of elements over which the loop iterates.</li>
+            </ul>
+            <p>Example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content29')">Copy Code</button>
+                </div>
+                <div class="content" id="content29">
+                    <p><span class="comment"># Example: Iterate over a list of numbers</span></p>
+                    <p>numbers = [<span class="red">1</span>,<span class="red">2</span>,<span class="red">3</span>,<span class="red">4</span>,<span class="red">5</span>]</p>
+                    <p><span class="blue">for</span> num <span class="blue">in</span> numbers:</p>
+                    <p class="tab"><span class="yellow">print</span>(num)</p>
+                </div>
+            </div>
+            <p>Output:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content30')">Copy Code</button>
+                </div>
+                <div class="content" id="content30">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                </div>
+            </div>
+            <p>In this example:</p>
+            <ul>
+                <li>The <b>'for'</b> loop iterates over the list <b>'numbers'</b>.</li>
+                <li>During each iteration, the variable <b>'num'</b> takes on the value of each element in the list.</li>
+                <li>The <b>'print(num)'</b> statement is executed for each element in the list, printing its value.</li>
+            </ul>
+            <h2 id="range-function">Range Function</h2>
+            <p>The <b>'range()'</b> function is commonly used with <b>'for'</b> loops to generate a sequence of numbers.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content31')">Copy Code</button>
+                </div>
+                <div class="content" id="content31">
+                    <p><span class="comment"># Example: Iterate over a range of numbers</span></p>
+                    <p><span class="blue">for</span> i <span class="blue">in</span> <span class="yellow">range</span>(<span class="red">1</span>, <span class="red">6</span>): <span class="comment"># Range from 1 to 5 (excluding 6)</span></p>
+                    <p><span class="yellow">print</span>(i)</p>
+                </div>
+            </div>
+            <p>Output:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content32')">Copy Code</button>
+                </div>
+                <div class="content" id="content32">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                </div>
+            </div>  
+            <h2 id="forloops-conclusion">Conclusion</h2>
+            <p>The <b>'for'</b> loop in Python is a versatile construct that allows you to iterate over sequences of elements with ease. By using <b>'for'</b> loops, you can automate repetitive tasks, iterate over collections, and implement various algorithms efficiently.</p>
+        </div>
+        <div class="while" id="while">
+            <h2 class="section">While Loops</h2>
+            <p>In Python, the <b>'while'</b> loop is used to repeatedly execute a block of code as long as a specified condition is true. It allows you to automate repetitive tasks and iterate over a sequence of statements until a certain condition is met.</p>
+            <h2 id="while-sintax">Sintax</h2>
+            <p>The syntax of the <b>'while'</b> loop in Python is as follows:</p>   
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content33')">Copy Code</button>
+                </div>
+                <div class="content" id="content33">
+                    <p><span class="blue">while</span> condition:</p>
+                    <p class="tab"><span class="comment"># Code block to be executed while the condition is true</span></p>
+                </div>
+            </div>
+            <p>The loop continues to execute the code block as long as the condition remains true. Once the condition evaluates to false, the loop terminates, and the program continues with the statement immediately following the loop.</p>
+            <p>Example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content34')">Copy Code</button>
+                </div>
+                <div class="content" id="content34">
+                    <p><span class="comment"># Example: Print numbers from 1 to 5 using a while loop</span></p>
+                    <p>counter = <span class="red">1</span></p>
+                    <p><span class="blue">while</span> counter <= <span class="red">5</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(counter)</p>
+                    <p class="tab">counter += <span class="red">1</span></p>
+                </div>  
+            </div>
+            <p>Output:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content35')">Copy Code</button>
+                </div>
+                <div class="content" id="content35">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                </div>  
+            </div>
+            <p>In this example:</p>
+            <ul>
+                <li>We initialize a variable <b>'counter'</b> to <b>'1'</b>.</li>
+                <li>The <b>'while'</b> loop continues to execute as long as <b>'counter'</b> is less than or equal to <b>'5'</b></li>
+                <li>Inside the loop, we print the value of <b>'counter'</b> and then increment it by <b>'1'</b> in each iteration.</li>
+                <li>When <b>'counter'</b> becomes <b>'6'</b>, the condition <b>'counter <= 5'</b> evaluates to false, and the loop terminates.</li>
+            </ul>
+            <h2 id="inf-loops">Infinite Loops</h2>
+            <p>Be cautious when using a <b>'while'</b> loop, as it can potentially lead to an infinite loop if the condition never becomes false. For example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content36')">Copy Code</button>
+                </div>
+                <div class="content" id="content36">
+                    <p><span class="comment"># Example: Infinite loop</span></p>
+                    <p><span class="blue">while True</span>:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"This is an infinite loop!"</span>)</p>
+                </div>  
+            </div>
+            <p>To prevent an infinite loop, ensure that the condition in the <b>'while'</b> loop eventually becomes false or include a mechanism to break out of the loop using the <b>'break'</b> statement.</p>
+            <h2 id="while-conclusion">Conclusion</h2>
+            <p>The <b>'while'</b> loop is a powerful control flow statement in Python that allows you to repeat a block of code until a specific condition is met. It is commonly used for tasks that require iterative processing, such as iterating over elements in a list, processing user input, or implementing game loops</p>
+        </div>
+        <div class="lists" id="lists">
+            <h2 class="section">Lists</h2>
+            <p>In Python, a list is a versatile and fundamental data structure that allows you to store and manipulate collections of data. Lists are mutable, meaning you can modify, add, or remove elements after the list is created. They are used extensively in Python programming for various tasks, such as storing multiple values, iterating over elements, and implementing algorithms.</p>
+            <h2 id="creating-lists">Creating lists</h2>
+            <p>You can create a list in Python by enclosing comma-separated values within square brackets <b>'[]'</b>. Here's how you can create a simple list:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content37')">Copy Code</button>
+                </div>
+                <div class="content" id="content37">
+                    <p><span class="comment"># Creating a list of numbers</span></p>
+                    <p>numbers = [<span class="red">1</span>, <span class="red">2</span>, <span class="red">3</span>, <span class="red">4</span>, <span class="red">5</span>]</p>
+                    <p><span class="comment"># Creating a list of strings</span></p>
+                    <p>fruits = [<span class="green">'apple'</span>, <span class="green">'banana'</span>, <span class="green">'orange'</span>, <span class="green">'grape'</span>]</p>
+                </div>
+            </div>
+            <h2 id="accessing-elements">Accessing Elements</h2>
+            <p>You can access individual elements in a list using indexing. Python uses zero-based indexing, meaning the index of the first element is <b>'0'</b>, the index of the second element is <b>'1'</b>, and so on. You can also use negative indexing to access elements from the end of the list.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content38')">Copy Code</button>
+                </div>
+                <div class="content" id="content38">
+                    <p><span class="comment"># Accessing elements of the list</span></p>
+                    <p><span class="yellow">print</span>(numbers[<span class="red">0</span>]) <span class="comment"># Output: 1</span></p>
+                    <p><span class="yellow">print</span>(fruits[-<span class="red">1</span>]) <span class="comment"># Output: 'grape'</span></p>
+                </div>
+            </div>
+            <h2 id="modifying-lists">Modifying Lists</h2>
+            <p>Lists in Python are mutable, which means you can change the elements of a list after it's created. You can modify elements by directly assigning new values to specific indices or using list methods like <b>'append()'</b>, <b>'insert()'</b>, <b>'remove()'</b>, <b>'pop()'</b>, etc.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content39')">Copy Code</button>
+                </div>
+                <div class="content" id="content39">
+                    <p><span class="comment"># Modifying elemets of the list</span></p>
+                    <p>fruits[<span class="red">0</span>] = <span class="green">'pear'</span> <span class="comment"># Change the first element to 'pear'</span></p>
+                    <p>numbers.append(<span class="red">6</span>) <span class="comment"># Change the first element to 'pear'</span></p>  
+                    <p>fruits.insert(<span class="red">2</span>, <span class="green">'kiwi'</span>) <span class="comment"># Insert 'kiwi' at index 2</span></p>
+                    <p>numbers.pop() <span class="comment"># Remove the last element from the list</span></p>
+                </div>
+            </div>
+            <h2 id="list-operations">List Operations</h2>
+            <p>Python provides various operations and methods for working with lists. You can concatenate lists using the <b>'+'</b> operator, repeat a list using the <b>'*'</b> operator, find the length of a list using the <b>'len()'</b> function, and more.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content40')">Copy Code</button>
+                </div>
+                <div class="content" id="content40">
+                    <p><span class="comment"># List operations</span></p>
+                    <p>combined_list = numbers + fruits <span class="comment"># Concatenate two lists</span></p>
+                    <p>repeated_list = fruits * <span class="red">3</span> <span class="comment"># Repeat the list three times</span></p>
+                    <p>list_length = <span class="yellow">len</span>(numbers) <span class="comment"># Get the length of the list</span></p>
+                </div>
+            </div>
+            <h2 id="lists-conclusion">Conclusion</h2>
+            <p>Lists are a fundamental data structure in Python that allow you to store and manipulate collections of data efficiently. With their versatility and mutability, lists are widely used for a variety of tasks in Python programming, making them an essential concept to understand.</p>
+        </div>
+        <div class="tryexcept" id="tryexcept">
+            <h2 class="section">Try/Except</h2>
+            <p>In Python, <b>'try'</b> and <b>'except'</b> statements are used for error handling and exception catching. They allow you to gracefully handle errors that may occur during the execution of your code, preventing it from crashing and providing a way to recover from unexpected situations.</p>
+            <h2 id="tryexcept-syntax">Syntax</h2>
+            <p>The <b>'try'</b> statement is used to wrap the code that may raise an exception. If an exception occurs within the <b>'try'</b> block, Python will look for corresponding <b>'except'</b> blocks to handle the exception.   </p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content41')">Copy Code</button>
+                </div>
+                <div class="content" id="content41">
+                    <p><span class="blue">try</span>:</p>
+                    <p class="tab"><span class="comment"># Code that may raise an exception</span></p>
+                    <p><span class="blue">except</span> ExceptionType:</p>
+                    <p class="tab"><span class="comment"># Code to handle the exception</span></p>
+                </div>
+            </div>
+            <p>Example:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content42')">Copy Code</button>
+                </div>
+                <div class="content" id="content42">
+                    <P><span class="comment"># Example: Handling division by zero error</span></P>
+                    <p><span class="blue">try</span>:</p>
+                    <p class="tab">result = <span class="red">10</span> / <soan class="red">0</soan> <span class="comment"># Attempt to divide by zero</span></p>
+                    <p><span class="blue">except</span> ZeroDivisionError:</p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"Error: Division by zero"</span>)</p>
+                </div>
+            </div>
+            <p>In this example:</p>
+            <ul>
+                <li>We attempt to divide the number <b>'10'</b> by zero within the <b>'try'</b> block.</li>
+                <li>Since dividing by zero raises a <b>'ZeroDivisionError'</b> exception, the execution jumps to the corresponding <b>'except'</b> block</li>
+                <li>The <b>'except'</b> block prints an error message indicating the division by zero error.</li>
+            </ul>
+            <h2 id="multiple-except-blocks">Multiple Except Blocks</h2>
+            <p>You can have multiple <b>'except'</b> blocks to handle different types of exceptions.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content43')">Copy Code</button>
+                </div>
+                <div class="content" id="content43">
+                    <p><span class="comment"># Example: Handling different types of error</span></p>
+                    <p><span class="blue">try</span>:</p>
+                    <p class="tab"><span class="comment"># Code that may raise an exception</span></p>
+                    <p><span class="blue">except</span> TypeError:</p>
+                    <p class="tab"><span class="comment"># Code to handle TypeError</span></p>
+                    <p><span class="blue">except</span> ValueError:</p>
+                    <p class="tab"><span class="comment"># Code to handle ValueError</span></p>
+                    <p><span class="blue">except</span> Exception <span class="blue">as</span> e:</p>
+                    <p class="tab"><span class="comment"># Code to handle other types of exceptions</span></p>
+                    <p class="tab"><span class="yellow">print</span>(<span class="green">"An error occurred:"</span>, e)</p>
+                </div>
+            </div>
+            <h2 id="finally-block">Finally Block</h2>
+            <p>You can optionally use a <b>'finally'</b> block to execute cleanup code that should run regardless of whether an exception occurred.</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content44')">Copy Code</button>
+                </div>
+                <div class="content" id="content44">
+                    <p><span class="comment"># Example: Using a finally block</span></p>
+                    <p><span class="blue">try</span>:</p>
+                    <p class="tab"><span class="comment"># Code that may raise an exception</span></p>
+                    <p><span class="blue">except</span> ExceptionType:</p>
+                    <p class="tab"><span class="comment"># Code to handle the exception</span></p>
+                    <p><span class="blue">finally</span>:</p>
+                    <p class="tab"><span class="comment"># Cleanup code that always runs</span></p>
+                </div>
+            </div>
+            <p>The <b>'finally'</b> block is useful for releasing resources, closing files, or performing other cleanup tasks.</p>
+            <h2 id="tryexcept-conclusion">Conclusion</h2>
+            <p>The <b>'try'</b> and <b>'except'</b> statements in Python provide a robust mechanism for handling errors and exceptions in your code. By gracefully handling unexpected situations, you can write more robust and reliable programs that gracefully handle errors and continue executing even in the face of unexpected conditions.</p>
+        </div>
+        <div class="exercices" id="exercices">
+            <h2 class="section">Exercices</h2>
+            <p>The best way to learn is practicing, so here there are some basic simple exercices that you will be able to solve using all you have learn.</p>
+            <h2 id="fibonacci-sequence">Fibonacci Sequence</h2>
+            <p>Write a Python program to generate and print the first 20 numbers from the Fibonacci sequence.</p>
+            <p>The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with <b>'0'</b> and <b>'1'</b>. The sequence begins as follows: <b>'0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...'</b>.</p>
+            <p><b>Instructions:</b></p>
+            <ul>
+                <li>Define a Python function called <b>'print_first_20_fibonacci'</b></li>
+                <li>Use a <b>'for'</b> loop to generate the first 20 Fibonacci nubmers.</li>
+                <li>Initialize the first two Fibonacci numbers as <b>'0'</b> and <b>'1'</b>.</li>
+                <li>Calculate each subsequent Fibonacci number by summing the last two Fibonacci numbers.</li>
+                <li>Print each Fibonacci number as it is generated.</li>
+            </ul>
+            <p><b>Example:</b></p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content45')">Copy Code</button>
+                </div>
+                <div class="content" id="content45">
+                    <p><span class="comment"># Function Call</span></p>
+                    <p>print_first_20_fibonacci()</p>
+                </div>
+            </div>
+            <p><b>Expected Output:</b></p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content46')">Copy Code</button>
+                </div>
+                <div class="content" id="content46">
+                    <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181</p>
+                </div>
+            </div>
+            <p><b>Constraints:</b></p>
+            <ul>
+                <li>None</li>
+            </ul>
+            <p>This exercise will require you to use a <b>'for'</b> loop to generate the first 20 Fibonacci numbers and print each number as it is generated. You'll need to initialize the first two Fibonacci numbers and calculate subsequent Fibonacci numbers by summing the last two numbers in the sequence.</p>
+            <h2 id="numbers-less-than-10">Print Numbers Less Than 10 from a List</h2>
+            <p>Write a Python program that takes a list of numbers as input and prints all numbers less than 10.</p>
+            <p><b>Example:</b></p>
+            <p>Input:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content47')">Copy Code</button>
+                </div>
+                <div class="content" id="content47">
+                    <p>numbers = [<span class="red">5</span>, <span class="red">12</span>, <span class="red">3</span>, <span class="red">8</span>, <span class="red">10</span>, <span class="red">15</span>, <span class="red">7</span>]</p>
+                </div>
+            </div>
+            <p>Output:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content48')">Copy Code</button>
+                </div>
+                <div class="content" id="content48">
+                    <p>5</p>
+                    <p>3</p>
+                    <p>8</p>
+                    <p>7</p>
+                </div>
+            </div>
+            <p><b>Instructions:</b></p>
+            <ul>
+                <li>Define a Python function called <b>'print_numbers_less_than_10'</b> that takes a list of numbers as input.</li>
+                <li>Use a <b>'for'</b> loop to iterate over each number in the list.</li>
+                <li>Within the loop, use an <b>'if'</b> statement to check if the current number is less than 10.</li>
+                <li>If the number is less than 10, print it.</li>
+            </ul>
+            <p><b>Example:</b></p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content49')">Copy Code</button>
+                </div>
+                <div class="content" id="content49">
+                    <p><span class="comment"># Sample Input</span></p>
+                    <p>numbers = [<span class="red">5</span>, <span class="red">12</span>, <span class="red">3</span>, <span class="red">8</span>, <span class="red">10</span>, <span class="red">15</span>, <span class="red">7</span>]</p>
+                    <p><span class="comment"># Function Call</span></p>
+                    <p>print_numbers_less_than_10(numbers)</p>
+                </div>
+            </div>
+            <p><b>Expected Output:</b></p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content50')">Copy Code</button>
+                </div>
+                <div class="content" id="content50">
+                    <p>5</p>
+                    <p>3</p>
+                    <p>8</p>
+                    <p>7</p>
+                </div>
+            </div>
+            <p><b>Constraints:</b></p>
+            <ul>
+                <li>The input list may contain both integers and floating-point numbers.</li>
+                <li>The input list may be empty or contain any number of elements.</li>
+            </ul>
+            <p>This exercise will require you to use a <b>'for'</b> loop to iterate over the elements of the input list and an <b>'if'</b> statement to filter and print the numbers less than 10.</p>
+            <h2 id="check-palindrome">Check Palindrome</h2>
+            <p>Write a Python program that checks if a given word is a palindrome.</p>
+            <p><b>Example:</b></p>
+            <p>Input:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content50')">Copy Code</button>
+                </div>
+                <div class="content" id="content50">
+                    <p><span class="red">word</span> = <span class="green">"radar"</span></p>
+                </div>
+            </div>
+            <p>Output:</p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content50')">Copy Code</button>
+                </div>
+                <div class="content" id="content50">
+                    <p><span class="blue">True</span></p>
+                </div>
+            </div>
+            <p><b>Instructions:</b></p>
+            <ul>
+                <li>Define a Python function called <b>'is_palindrome'</b> that takes a word as input.</li>
+                <li>Use string slicing or iteration to reverse the word.</li>
+                <li>Compare the original word with its reversed form to check if they are the same.</li>
+                <li>Return <b>'True'</b> if the word is a palindrome, and <b>'False'</b> otherwise.</li>
+            </ul>
+            <p><b>Example:</b></p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content49')">Copy Code</button>
+                </div>
+                <div class="content" id="content49">
+                    <p><span class="comment"># Sample Input</span></p>
+                    <p>word = <span class="green">"radar"</span></p>
+                    <p><span class="comment"># Function Call</span></p>
+                    <p>result = is_palindrome(word)</p>
+                    <p><span class="yellow">print</span>(result)</p>
+                </div>
+            </div>
+            <p><b>Expected Output:</b></p>
+            <div class="code">
+                <div class="header">
+                    <div class="title">python</div>
+                    <button class="copy-button" onclick="copyText('#content50')">Copy Code</button>
+                </div>
+                <div class="content" id="content50">
+                    <p><span class="blue">True</span></p>
+                </div>
+            </div>
+            <p><b>Constraints:</b></p>
+            <ul>
+                <li>The input word will contain only lowercase alphabets.</li>
+                <li>The word may consist of one or more characters.</li>
+            </ul>
+            <p>This exercise will require you to implement a solution that checks whether a given word is a palindrome or not. You'll need to compare the original word with its reversed form to determine if they are the same.</p>
+        </div>
+    </main>
+</body>
+</html>
